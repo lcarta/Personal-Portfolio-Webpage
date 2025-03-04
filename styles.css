@@ -1,1 +1,366 @@
+:root {
+  --shadow-hover-light: pink;
+  --background-color-dark: #222b39;
+  --color-text-light: #fefefe;
+  --color-accent: #00d993;
+}
 
+
+* {
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color-dark);
+  font-family: 'Raleway', sans-serif;
+}
+
+/*Start header selectors*/
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color-dark);
+  z-index: 1;
+
+}
+
+
+#header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100vw;
+  height: fit-content;
+}
+
+
+#logo-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 10px 10px 10px 30px;
+}
+
+
+#logo-container img {
+  width: 40px;
+}
+
+#logo-name {
+  margin-left: 10px;
+  color: var(--color-accent);
+  font-size: 20px;
+}
+
+#navbar {
+  margin: auto 0;
+  width: 40%;
+
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+
+}
+
+#navbar ul a {
+  color: var(--color-accent);
+}
+
+#navbar ul li:hover {
+  box-shadow: 1px 0px 20px 6px var(--shadow-hover-light);
+
+}
+
+
+.header-footer-bottom-border {
+  height: 3px;
+  width: 100vw;
+  background: linear-gradient(90deg, rgba(0, 217, 147, 0) 0%, rgba(0, 217, 147, 0.5354516806722689) 27%, var(--color-accent)50%);
+  animation: 1s linear 1 header-border-animation;
+}
+
+
+/*End header selectors*/
+
+
+/*Start Welcome section selectors*/
+
+
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-section h1 {
+  color: var(--color-text-light);
+  font-size: max(2.5em, 4vw);
+  margin-bottom: 10px;
+}
+
+#welcome-section h2 {
+  color: var(--color-accent);
+  font-size: max(1.5em, 2vw);
+  margin-bottom: 10px;
+}
+
+#welcome-section p {
+  color: var(--color-text-light);
+  font-size: max(1em, 1.8vw);
+
+}
+
+/*start welcome section scroll arrow selectors*/
+
+
+.scroll-arrow span {
+  position: relative;
+  top: 0;
+  font-size: 60px;
+  animation: 1.5s linear infinite scroll-arrow-animation;
+  z-index: 0;
+}
+
+.scroll-arrow a {
+  color: var(--color-accent);
+
+}
+
+
+.scroll-arrow span:hover {
+  border-radius: 50%;
+  box-shadow: 1px 0px 20px 6px var(--shadow-hover-light);
+  animation: none;
+  top: 15px;
+}
+
+/*End welcome section scroll arrow selectors*/
+
+
+
+/*End Welcome section selectors*/
+
+
+/*Start Project section selectors*/
+
+
+#projects {
+  padding: 0 5%;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--color-accent);
+  font-size: max(1.5em, 2vw);
+  margin-bottom: 10px;
+}
+
+.projects-grid {
+  background: rgba(74, 80, 87, 1);
+  display: grid;
+  width: 90vw;
+  max-width: 1500px;
+  min-width: 300px;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 5%;
+  padding: 40px;
+}
+
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  align-content: center;
+  font-size: max(1em, 1.2vw);
+  color: var(--color-text-light);
+  background-color: var(--background-color-dark);
+  border: 3px solid transparent;
+}
+
+
+.project-tile a {
+  color: inherit;
+}
+
+.project-tile h3 {
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  padding: 10px;
+
+}
+
+
+.project-img {
+
+  height: fit-content;
+  width: max(200px, 20vw);
+  border-radius: 0 0 10px 10px;
+  margin: 10px;
+}
+
+
+
+.project-tile:hover {
+  border: 3px solid var(--color-accent);
+  color: var(--color-accent);
+  transition: color 1s ease-in-out, border 1s ease-in-out;
+  box-shadow: 1px 0px 20px 6px var(--shadow-hover-light);
+}
+
+/*End Project section selectors*/
+
+
+/*Start Contact section selectors*/
+
+
+#contacts {
+  margin-top: 100px;
+}
+
+.contacts-container {
+  background-color: rgba(0, 217, 147, 0.5);
+  height: fit-content;
+  width: 100%;
+}
+
+
+.contacts-container h3 {
+  text-align: center;
+  padding: 40px 0 50px 0;
+  color: var(--color-text-light);
+  font-size: max(1.2em, 1.5vw);
+}
+
+
+.contact-icons {
+  padding: 0 10% 20px 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+.contact-icons a {
+  font-size: 1.2em;
+  color: var(--color-text-light);
+  justify-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+
+.contact-icons a i,
+.contact-icons a span {
+  font-size: 2em;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+
+.contact-icons a:hover {
+  box-shadow: 1px 0px 20px 6px var(--shadow-hover-light);
+}
+
+/*End Contact section selectors*/
+
+
+/*Start Footer selectors*/
+
+
+footer {
+  margin-top: 25px;
+  height: 80px;
+}
+
+
+#footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer-container ul,
+#copyright {
+  padding: 20px 30px;
+  color: var(--color-text-light);
+}
+
+#footer-container ul li {
+  list-style-type: '*  ';
+}
+
+#footer-container p {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+
+
+/*End Footer selectors*/
+
+
+@media only screen and(max-width: 800px) {
+  #navbar {
+    background-color: black;
+    width: 300px;
+
+  }
+
+}
+
+
+@media only screen and(max-width: 400px) {
+  #footer-container {
+    flex-direction: columns;
+  }
+
+}
+
+@keyframes header-border-animation {
+  0% {
+    width: 1%;
+    background: linear-gradient(90deg, rgba(0, 217, 147, 0) 0%, rgba(0, 217, 147, 0.5354516806722689) 27%, rgba(0, 217, 147, 1) 62%, rgba(0, 226, 153, 1) 75%, rgba(98, 255, 204, 1) 95%, rgba(255, 244, 135, 1) 98%, rgba(255, 255, 255, 1) 100%);
+  }
+
+
+
+  95% {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 217, 147, 0) 0%, rgba(0, 217, 147, 0.5354516806722689) 27%, rgba(0, 217, 147, 1) 62%, rgba(0, 226, 153, 1) 80%, rgba(98, 255, 204, 1) 98%, rgba(255, 244, 135, 1) 100%);
+  }
+
+  100% {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 217, 147, 0) 0%, rgba(0, 217, 147, 0.5354516806722689) 27%, rgba(0, 217, 147, 1) 62%);
+  }
+}
+
+
+
+@keyframes scroll-arrow-animation {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 30px;
+  }
+}
