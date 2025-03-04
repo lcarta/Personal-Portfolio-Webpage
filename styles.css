@@ -177,12 +177,14 @@ header {
   display: grid;
   width: 90vw;
   max-width: 1500px;
-  min-width: 300px;
+  min-width: 250px;
   margin: 20px auto;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 3%;
-  padding: 40px;
+  padding: 5%;
   align-content: center;
+  justify-items: center;
+  justify-content: center;
 }
 
 
@@ -191,7 +193,7 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   border-radius: 10px;
-  align-content: center;
+  align-items: center;
   font-size: max(1em, 1.2vw);
   color: var(--color-text-light);
   background-color: var(--background-color-dark);
@@ -205,7 +207,6 @@ header {
 
 .project-tile h3 {
   border-radius: 10px 10px 0 0;
-  text-align: center;
   padding: 10px;
 
 }
@@ -293,6 +294,7 @@ header {
 footer {
   margin-top: 25px;
   height: 80px;
+  width: 100%;
 }
 
 
