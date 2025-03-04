@@ -69,16 +69,19 @@ header {
   justify-content: space-evenly;
   list-style-type: none;
 
+
 }
 
 #navbar ul a {
   color: var(--color-accent);
+
 }
 
 #navbar ul li:hover {
   box-shadow: 1px 0px 20px 6px var(--shadow-hover-light);
 
 }
+
 
 
 .header-footer-bottom-border {
@@ -159,7 +162,7 @@ header {
 
 
 #projects {
-  padding: 0 5%;
+  padding: 5%;
 }
 
 .section-title {
@@ -193,7 +196,6 @@ header {
   color: var(--color-text-light);
   background-color: var(--background-color-dark);
   border: 3px solid transparent;
-
 }
 
 
@@ -213,6 +215,7 @@ header {
 
   height: fit-content;
   width: max(200px, 20vw);
+  max-width: 350px;
   border-radius: 0 0 10px 10px;
   margin: 10px;
 }
