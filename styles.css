@@ -175,10 +175,11 @@ header {
   width: 90vw;
   max-width: 1500px;
   min-width: 300px;
-  margin: auto;
+  margin: 20px auto;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 5%;
+  grid-gap: 3%;
   padding: 40px;
+  align-content: center;
 }
 
 
@@ -192,6 +193,7 @@ header {
   color: var(--color-text-light);
   background-color: var(--background-color-dark);
   border: 3px solid transparent;
+
 }
 
 
@@ -317,22 +319,48 @@ footer {
 /*End Footer selectors*/
 
 
-@media only screen and(max-width: 800px) {
-  #navbar {
-    background-color: black;
-    width: 300px;
+@media only screen and (max-width: 800px) {
 
-  }
-
-}
-
-
-@media only screen and(max-width: 400px) {
   #footer-container {
-    flex-direction: columns;
+    flex-direction: column;
   }
 
+  #navbar {
+    margin: auto 0;
+    width: 60%;
+  }
 }
+
+
+@media only screen and (max-width: 740px) {
+
+  .project-tile:nth-of-type(1) {
+    margin-top: 25px;
+  }
+
+  .project-tile:nth-last-of-type(n) {
+    margin-bottom: 25px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  #header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar {
+    margin: auto 0;
+    width: 90%;
+
+  }
+
+  #footer-container p {
+    font-size: 0.5em;
+  }
+}
+
 
 @keyframes header-border-animation {
   0% {
