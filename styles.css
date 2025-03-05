@@ -385,6 +385,7 @@ footer {
   }
 
   .background-welcome {
+    width: 100vw;
     top: 70px;
 
   }
