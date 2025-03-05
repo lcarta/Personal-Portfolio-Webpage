@@ -16,6 +16,7 @@
 body {
   background-color: var(--background-color-dark);
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
 
 /*Start header selectors*/
@@ -94,19 +95,36 @@ header {
 
 /*End header selectors*/
 
+main {
+  padding: 0 5vw;
+
+}
 
 /*Start Welcome section selectors*/
 
-
+.background-welcome {
+  background: url(./Images/Background-welcome-wide.png) no-repeat fixed center;
+  opacity: 0.25;
+  width: 80vw;
+  min-width: 250px;
+  height: 100vh;
+  position: absolute;
+  top: 50px;
+  z-index: -1;
+}
 
 #welcome-section {
   height: 100vh;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 50px;
   align-items: center;
   justify-content: center;
+  /*background: url(./Images/Background-welcome-wide.png), #222b39;
+  background-repeat: no-repeat, repeat;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-position: center;*/
 }
 
 #welcome-section h1 {
@@ -175,7 +193,6 @@ header {
 .projects-grid {
   background: rgba(74, 80, 87, 1);
   display: grid;
-  width: 90vw;
   max-width: 1500px;
   min-width: 250px;
   margin: 20px auto;
@@ -346,6 +363,8 @@ footer {
   .project-tile:nth-last-of-type(n) {
     margin-bottom: 25px;
   }
+
+
 }
 
 
@@ -363,6 +382,11 @@ footer {
 
   #footer-container p {
     font-size: 0.5em;
+  }
+
+  .background-welcome {
+    top: 70px;
+
   }
 }
 
